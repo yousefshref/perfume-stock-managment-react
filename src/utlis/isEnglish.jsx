@@ -1,1 +1,1 @@
-export const isEnglish = localStorage.getItem("language") == "English";
+export const isEnglish = Object.keys(localStorage).some((key) => key === 'language' && localStorage.getItem(key) === 'English') || localStorage.getItem('language') === null;
