@@ -1,0 +1,1 @@
+export const isEnglish = localStorage.getItem("language") == "English";

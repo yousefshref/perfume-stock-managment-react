@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "normal-font-2";
+  src: url("../public/fonts/Vonique64.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "normal-font-2-bold";
+  src: url("../public/fonts/Vonique\ 64\ Bold.ttf") format("truetype");
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+.comfortaa {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.normal-font {
+  font-family: "normal-font-2";
+}
+.normal-font-bold {
+  font-family: "normal-font-2-bold";
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.container-cc {
+  @apply p-3 bg-gray-100 min-h-[100vh] w-full;
+}
+
+.content-container {
+  @apply w-full md:max-w-[calc(100%-250px)] max-w-[calc(100%-65px)] p-4;
+}
+
+.inpt {
+  @apply w-full outline-none transition-all hover:border-gray-500 rounded-md p-2 border;
+}
+
+.inpt-2 {
+  @apply p-2 outline-none border-b transition-all hover:border-b-amber-700 focus:border-b-amber-700;
+}
+
+.btn-green {
+  @apply rounded-md p-2 py-3 transition-all hover:bg-green-400 active:bg-green-300 bg-green-300 text-zinc-800 w-full;
+}
