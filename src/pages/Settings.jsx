@@ -8,6 +8,7 @@ const Settings = () => {
   );
   useEffect(() => {
     setLanguage(localStorage.getItem("language") || "English");
+    localStorage.setItem("language", language);
   }, [language]);
   return (
     <div className="container-cc">
